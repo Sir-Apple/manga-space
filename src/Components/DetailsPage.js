@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from 'react'
-import { Link, useParams } from 'react-router-dom'
+import { useParams } from 'react-router-dom'
 import axios from 'axios'
 import Helmet from 'react-helmet'
 import { Container, Col, Row, Card, Button, Badge, ListGroup, Modal } from 'react-bootstrap'
@@ -45,12 +45,13 @@ const DetailsPage = () => {
   };
   return (
     <>
+    <div style={{ backgroundColor: 'black', color: 'white', minHeight: '100vh' }}>
       <Helmet>
         <title>{getdata.data.data.seoOnPage.titleHead}</title>
       </Helmet>
-      <Container>
+      <Container style={{ fontFamily: 'Bangers, monospace' }}>
         <Menu></Menu>
-        <Button as={Link} to="/home" >Back to Homepage</Button>
+        {/* <Button as={Link} to="/home" >Back to Homepage</Button> */}
         <Row>
           <Col>
             <Card>
@@ -85,7 +86,7 @@ const DetailsPage = () => {
                       <Card.Text>
                       {item.category && item.category.length > 0 ? (
                           item.category.map( (category, index) => (
-                              <Badge bg="dark" key={index}>
+                              <Badge bg="dark" key={index} style={{ fontFamily: 'Ubuntu, sans-serif' }}>
                                   {category.name}
                               </Badge>
                           ))) : (
@@ -146,6 +147,7 @@ const DetailsPage = () => {
             </Modal>
           )}
       </Container>
+      </div>
     </>
   )
 }

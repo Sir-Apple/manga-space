@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from 'react'
 import axios from 'axios'
 import Helmet from 'react-helmet'
-import { Container, Col, Row, Card, Button, Badge, Pagination } from 'react-bootstrap'
+import { Container, Col, Row, Card, Badge, Pagination } from 'react-bootstrap'
 import { Link } from 'react-router-dom'
 import Menu from './Include/Menu'
 
@@ -37,11 +37,11 @@ const Home = () => {
     const totalItems = getdata?.data?.params?.pagination?.totalItems || 0;
     const totalPages = Math.ceil(totalItems / itemsPerPage);
   return (<>
-    <div>
+    <div style={{ backgroundColor: 'black', color: 'white', minHeight: '100vh'}}>
         <Helmet>
             <title>{getdata.data.seoOnPage.titleHead}</title>
         </Helmet>
-        <Container>
+        <Container style={{ fontFamily: 'Bangers, monospace' }}>
             <Menu></Menu>
             <Row>
                 <Col>
@@ -57,22 +57,22 @@ const Home = () => {
                 {items && items.length > 0 ? (
                     items.map( (item, index) => (
                 <Col>
-                    <Card>
-                        <Card.Img variant="top" src={`https://img.otruyenapi.com/uploads/comics/${item.thumb_url}`} />
+                    <Card as={Link} to={`/manga/${item.slug}`}>
+                        <Card.Img variant="top" src={`https://img.otruyenapi.com/uploads/comics/${item.thumb_url}` } />
                         <Card.Body>
                             <Card.Title>{item.name || "No Title"}</Card.Title>
                             <Card.Text>{item.updatedAt}</Card.Text>
                             <Card.Text>
                             {item.category && item.category.length > 0 ? 
                                 item.category.map( (category, index) => (
-                                    <Badge bg="dark" key={index}>
+                                    <Badge bg="dark" key={index} style={{ fontFamily: 'Ubuntu, sans-serif' }}>
                                         {category.name}
                                     </Badge>
                                 )) : 
                                     "Others"
                                 }
                             </Card.Text>
-                            <Button variant="success btn-sm" as={Link} to={`/manga/${item.slug}`}>Details</Button>
+                            {/* <Button variant="success btn-sm" as={Link} to={`/manga/${item.slug}`}>Details</Button> */}
                         </Card.Body>
                     </Card>
                 </Col>
