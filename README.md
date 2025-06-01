@@ -1,3 +1,19 @@
+# My Manga Space
+Technology used:
+- ReactJS
+- JavaScript
+- CSS
+
+## Description
+My Manga Space is a React-based manga browsing platform that fetches and displays up-to-date manga content from the OtruyenAPI. With a stylish dark theme, bold fonts, and responsive card-based layout, users can:
+    📖 Explore the latest manga releases by category or genre
+    🔍 Search for manga titles via the search interface
+    ⭐ View trending manga lists
+    📄 Access detailed information on each manga, including cover, description, and categories
+
+## Testing
+View web live here: https://manga-space.netlify.app/home
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
