@@ -32,7 +32,7 @@ const Menu = () => {
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="me-auto">
-                <Nav.Link as={Link} to="/home">Home</Nav.Link>
+                {/* <Nav.Link as={Link} to="/home">Home</Nav.Link> */}
                 <Nav.Link as={Link} to="/trending/dang-phat-hanh">Publishing</Nav.Link>
                 <Nav.Link as={Link} to="/trending/hoan-thanh">Completed</Nav.Link>
                 <Nav.Link as={Link} to="/trending/sap-ra-mat">Coming soon</Nav.Link>
