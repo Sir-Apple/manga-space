@@ -45,6 +45,16 @@ const Search = () => {
         </Helmet>
         <Container style={{ fontFamily: 'Bangers, monospace' }}>
             <Menu></Menu>
+            <h1 style={{
+            fontFamily: 'Bangers, cursive',
+            fontSize: '3rem',
+            textAlign: 'center',
+            margin: '20px 0',
+            color: 'white'
+            }}>
+            My Manga Space
+            </h1>
+            <hr style={{ borderTop: '2px solid white', width: '50%', margin: '0 auto 30px' }} />
             <Row>
                 <Col>
                 <Card>
